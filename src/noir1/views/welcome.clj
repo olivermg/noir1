@@ -15,11 +15,11 @@
    [:p "hope you like it!"]))
 
 (defpage "/mustache" []
-  (stencil/render-file "html/page1"
+  (stencil/render-file "public/templates/page1"
                        {:name "Oliver"
                         :message "Oh noes"}))
 
 (defpage "/fluid" []
   (stencil/render-file
-   "html/fluid"
+   "public/templates/fluid"
    {:username "Oliver"}))
