@@ -1,9 +1,14 @@
 (ns noir1.views.welcome
   (:require [noir1.views.common :as common]
-            [noir.content.getting-started]
+            ;[noir.content.getting-started]
             [stencil.core :as stencil])
 
   (:use [noir.core :only [defpage]]))
+
+(defpage "/" []
+  (stencil/render-file
+   "public/templates/fluid"
+   {:username "John Doe"}))
 
 (defpage "/welcome" []
          (common/layout
